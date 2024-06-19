@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <div class="form">
+      <h2 class="form__title">Contact Us</h2>
+
+      <div class="form__item form__first-name">
+        <label class="form__label form__label--first-name">First Name</label>
+        <input class="form__input form__input--first-name" type="text" id="firstName" required />
+        <label class="form__error form__error--first-name hidden">This field is required</label>
+      </div>
+
+      <div class="form__item form__last-name">
+        <label class="form__label form__label--last-name">Last Name</label>
+        <input class="form__input form__input--last-name" type="text" id="lastName" required />
+        <label class="form__error form__error--last-name hidden">This field is required</label>
+      </div>
+
+      <div class="form__item form__email">
+        <label class="form__label form__label--email">Email Address</label>
+        <input class="form__input form__input--email" type="email" id="email" required />
+        <label class="form__error form__error--email hidden">Please enter a valid email address</label>
+      </div>
+
+      <div class="form__item form__query">
+        <label class="form__label form__label--query">Query Type</label>
+        <div class="form__query-container">
+          <div>
+            <input class="form__input--query" type="radio" id="general" name="query" required />
+            <label class="form__label--query-radio" for="general">General Enquiry</label>
+          </div>
+
+          <div>
+            <input class="form__input--query" type="radio" id="support" name="query" required />
+            <label class="form__label--query-radio" for="support"> Support Request</label>
+          </div>
+        </div>
+        <label class="form__error form__error--query hidden">Please select a query type</label>
+      </div>
+
+      <div class="form__item form__message">
+        <label class="form__label form__label--message">Message</label>
+        <textarea class="form__input form__input--message"></textarea>
+        <label class="form__error form__error--message hidden">This field is required</label>
+      </div>
+
+      <div class="form__item form__check">
+        <div class="form__check-container">
+          <input class="form__input--check" type="checkbox" id="check" />
+          <label class="form__label form__label--check" for="check">I consent to being contacted by the team</label>
+        </div>
+        <label class="form__error form__error--check hidden"
+          >To submit this form, please consent to being contacted</label
+        >
+      </div>
+
+      <button class="form__submit">Submit</button>
+    </div>
+
+    <div class="toast toast--hidden">
+      <div class="toast__title">
+        <img src="./assets/images/icon-success-check.svg" alt="success check icon" />
+        <span>Message Sent!</span>
+      </div>
+      <div class="toast__text">Thanks for completing the form. We'll be in touch soon!</div>
+    </div>
+  </body>
+</html>
